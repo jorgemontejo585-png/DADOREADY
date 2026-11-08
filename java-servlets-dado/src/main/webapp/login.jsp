@@ -39,7 +39,7 @@
         </div>
         
         <div style="margin-top:15px;font-size:12px;color:#777;text-align:center;">
-            Credencial de prueba del docente: <b>admin@boxesya.com</b> / <b>admin123</b>
+     
         </div>
     </div>
 
