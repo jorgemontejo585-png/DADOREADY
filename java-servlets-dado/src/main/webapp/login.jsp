@@ -33,13 +33,18 @@
             <button type="submit" class="module-btn" style="width:100%;">Ingresar</button>
         </form>
         
-        <div style="margin-top:15px;font-size:12px;color:#777;">
+        <div style="margin-top:20px;text-align:center;font-size:13px;color:var(--text-muted);">
+            ¿No tienes una cuenta aún? 
+            <a href="<%= request.getContextPath() %>/registro.jsp" style="color:var(--gold-primary);text-decoration:none;font-weight:600;">Regístrate aquí</a>
+        </div>
+        
+        <div style="margin-top:15px;font-size:12px;color:#777;text-align:center;">
             Credencial de prueba del docente: <b>admin@boxesya.com</b> / <b>admin123</b>
         </div>
     </div>
 
-    <p style="text-align:center;margin-top:15px;">
-        <a href="<%= request.getContextPath() %>/productos" style="color:#c9a84c;">← Volver al catálogo</a>
+    <p style="text-align:center;margin-top:20px;">
+        <a href="<%= request.getContextPath() %>/productos" style="color:var(--gold-primary);text-decoration:none;">← Volver al catálogo</a>
     </p>
 </div>
 </body>
