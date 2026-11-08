@@ -27,7 +27,7 @@
 
             <div class="form-group">
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" value="admin123" required>
+                <input type="password" id="password" name="password" value="" required>
             </div>
 
             <button type="submit" class="module-btn" style="width:100%;">Ingresar</button>
