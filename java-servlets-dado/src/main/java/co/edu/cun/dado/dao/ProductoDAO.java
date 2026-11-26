@@ -11,8 +11,14 @@ public class ProductoDAO {
 
     public List<Producto> listarActivos() {
         List<Producto> lista = new ArrayList<>();
+        Connection con = Conexion.getConexion();
+        if (con == null) {
+            System.err.println("Aviso: No hay conexion activa a PostgreSQL. Verifica que PostgreSQL este iniciado y la contraseña en Conexion.java sea correcta.");
+            return lista;
+        }
+
         String sql = "SELECT p.*, c.nombre AS categoria, pr.nombre_empresa AS proveedor FROM productos p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN proveedores pr ON p.id_proveedor = pr.id_proveedor WHERE p.activo = TRUE ORDER BY p.id_producto DESC";
-        try (Connection con = Conexion.getConexion();
+        try (con;
              PreparedStatement ps = con.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
 

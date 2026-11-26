@@ -28,6 +28,7 @@ export const Register: React.FC<RegisterProps> = ({ navigate }) => {
     const result = register({
       nombre: nombre.trim(),
       email: email.trim(),
+      password,
       telefono: telefono.trim(),
       direccion: direccion.trim(),
     });

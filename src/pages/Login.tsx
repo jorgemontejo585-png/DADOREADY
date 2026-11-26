@@ -25,12 +25,6 @@ export const Login: React.FC<LoginProps> = ({ navigate }) => {
     }
   };
 
-  const fillCredentials = (demoEmail: string, demoPass: string) => {
-    setEmail(demoEmail);
-    setPassword(demoPass);
-    setErrorMsg('');
-  };
-
   return (
     <div className="module-page" style={{ paddingTop: '40px', paddingBottom: '60px' }}>
       <div className="module-container" style={{ maxWidth: '500px' }}>
@@ -51,7 +45,7 @@ export const Login: React.FC<LoginProps> = ({ navigate }) => {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="ejemplo@boxesya.com"
+                placeholder="correo@ejemplo.com"
                 required
               />
             </div>
@@ -72,22 +66,6 @@ export const Login: React.FC<LoginProps> = ({ navigate }) => {
               Iniciar sesión
             </button>
           </form>
-
-          <div style={{ marginTop: '20px', paddingTop: '15px', borderTop: '1px solid #222' }}>
-            <span style={{ fontSize: '11px', color: '#777', display: 'block', marginBottom: '8px' }}>
-              Credenciales de prueba (clic para autocompletar):
-            </span>
-            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-              <button
-                type="button"
-                className="module-btn"
-                style={{ fontSize: '11px', padding: '6px 10px', background: '#333', color: '#ffd700' }}
-                onClick={() => fillCredentials('admin@boxesya.com', 'admin123')}
-              >
-                Admin (admin@boxesya.com / admin123)
-              </button>
-            </div>
-          </div>
         </div>
 
         <p style={{ marginTop: '15px', textAlign: 'center' }}>

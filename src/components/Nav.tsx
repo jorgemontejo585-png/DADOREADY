@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
+import logoImg from '../../imagenes/logo.png';
 
 interface NavProps {
   currentRoute: string;
@@ -15,7 +16,7 @@ export const Nav: React.FC<NavProps> = ({ currentRoute, navigate, isAdmin = fals
     return (
       <nav className="nav">
         <div className="logo" onClick={() => navigate('admin-products')} style={{ cursor: 'pointer' }}>
-          <img src="/imagenes/logo.png" alt="Logo de DADO" style={{ width: '32px', height: '32px', borderRadius: '5px' }} />
+          <img src={logoImg} alt="Logo de DADO" style={{ width: '32px', height: '32px', borderRadius: '5px' }} />
           <span className="logo-text">DADO ADMIN</span>
         </div>
 
@@ -58,7 +59,7 @@ export const Nav: React.FC<NavProps> = ({ currentRoute, navigate, isAdmin = fals
   return (
     <nav className="nav">
       <div className="logo" onClick={() => navigate('home')} style={{ cursor: 'pointer' }}>
-        <img src="/imagenes/logo.png" alt="Logo de DADO" style={{ width: '32px', height: '32px', borderRadius: '5px' }} />
+        <img src={logoImg} alt="Logo de DADO" style={{ width: '32px', height: '32px', borderRadius: '5px' }} />
         <span className="logo-text">DADO</span>
       </div>
 
